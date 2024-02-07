@@ -27,4 +27,11 @@ class EmployeRepositoryTest {
         assertNotNull(employe, "On doit trouver l'employé Rémi Bastide dans data.sql");
         assertEquals("Remi.Bastide@univ-jfc.fr", employe.getEmail());
     }
+    @Test
+    void onTrouveUnEmployeParSonMatricule() {
+        log.info("On peut trouver un employé par son matricule (requête dans le repository)");
+        Employe employe = dao.findByMatricule(1);
+        assertNotNull(employe, "On doit trouver l'employé Rémi Bastide dans data.sql");
+        assertEquals("Remi.Bastide@univ-jfc.fr", employe.getEmail());
+    }
 }

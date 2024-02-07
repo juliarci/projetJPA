@@ -12,5 +12,5 @@ public interface EmployeRepository extends JpaRepository<Employe, Integer> {
      * @return L'employe correspondant au nom fourni, ou null si pas trouvé.
      */
     Employe findByNom(String nomDeLemploye);
-
+    Employe findByMatricule(Integer matriculeDeLemploye);
 }
